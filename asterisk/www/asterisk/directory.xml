@@ -1,0 +1,12 @@
+  <CiscoIPPhoneDirectory>
+    <Title>IP Telephony Directory</Title>
+    <Prompt>People reachable via VoIP</Prompt>
+    <DirectoryEntry>
+      <Name>Sinbad Hotline</Name>
+      <Telephone>666</Telephone>
+    </DirectoryEntry>
+    <DirectoryEntry>
+      <Name>Weather</Name>
+      <Telephone>2</Telephone>
+    </DirectoryEntry>
+  </CiscoIPPhoneDirectory>
