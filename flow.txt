@@ -1,0 +1,18 @@
+[main menu]
+1. -> [IVR: sinbad owes you money - Survey] -> [IVR: sinbad owes you money - Music], collecting checks -> [Path to Brendan]
+2. (all other beef) -> survey -> music2 -> call doesn't matter -> [Path to Brendan]
+3. (tell sinbad he is great) -> survey -> call is important -> D
+4. (more info on shazam) -> survey -> emergency -> [Path to Brendan]
+5. (other shazam memorabilia) -> survey -> blood -> ring 3 -> E
+6. (rep sounds like sinbad) -> survey -> C
+7. (white girl) -> survey -> C
+8. () -> E
+0. (directly to sinbad) -> F
+(no input) -> rotary phone -> F
+
+[Path to Brendan]: music 2 -> website -> ring 3 -> sinbad is busy -> [Brendan Frasier Self Help Desk]
+[Brendan Frasier Self Help Desk]: music -> tired of waiting -> press * -> ring 3 -> brendan voicemail -> end
+C. music -> hire sinbad -> [Path to Brendan]
+D. music -> thank you -> ring 3 -> sinbad voicemail -> end
+E. music -> goats -> with you forever -> [Brendan Frasier Self Help Desk]
+F. music -> you may remember -> D
