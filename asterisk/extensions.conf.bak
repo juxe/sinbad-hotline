@@ -866,9 +866,255 @@ exten => _X.,40000(ani),NoOp(ANI: ${EXTEN})
 ; "core show function <COMMAND>" will show you more information about
 ; one function. Remember that function names are UPPER CASE.
 
-#include sinbad.conf
-
 [from-internal]
 ;exten = 100,1,Answer()
 exten = 666,1,Goto(sinbad-hotline,s,1)
+
+[sinbad-hotline]
+exten => s,1,NoOp(sinbad-main)
+  same => n,Answer(500)
+  same => n,Playback(sinbad/ring1)
+  same => n,Background(sinbad/mainmenu)
+  same => n,WaitExten(5)
+  same => n,Goto(sinbad-rotary,s,1)
+
+exten => 0,1,Goto(sinbad-speak-directly,s,1)
+exten => 1,1,Goto(sinbad-money,s,1)
+exten => 2,1,Goto(sinbad-beef,s,1)
+exten => 3,1,Goto(sinbad-great,s,1)
+exten => 4,1,Goto(sinbad-emergency,s,1)
+exten => 5,1,Goto(sinbad-memoribilia,s,1)
+exten => 6,1,Goto(sinbad-hire,s,1)
+exten => 7,1,Goto(sinbad-hire,s,1)
+exten => 8,1,Goto(sinbad-goats,s,1)
+exten => i,1,Goto(sinbad-rotary,s,1)
+
+[sinbad-money]
+exten => s,1,NoOp(sinbad-money)
+  same => n,Playback(sinbad/survey)
+  same => n,Background(sinbad/music2_25s)
+  same => n,Goto(sinbad-money-collecting,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-money-collecting,s,1)
+
+[sinbad-money-collecting]
+exten => s,1,NoOp(sinbad-money-collecting)
+  same => n,Playback(sinbad/collectingchecks)
+  same => n,Goto(sinbad-music-2,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-music-2,s,1)
+
+[sinbad-music-2]
+exten => s,1,NoOp(sinbad-music-2)
+  same => n,Background(sinbad/music2)
+  same => n,Goto(sinbad-website,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-website,s,1)
+
+[sinbad-website]
+exten => s,1,NoOp(sinbad-website)
+  same => n,Playback(sinbad/website)
+  same => n,Goto(sinbad-website-ring,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-website-ring,s,1)
+
+[sinbad-website-ring]
+exten => s,1,NoOp(sinbad-website-ring)
+  same => n,Playback(sinbad/ring3)
+  same => n,Goto(sinbad-busy,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-busy,s,1)
+
+[sinbad-busy]
+exten => s,1,NoOp(sinbad-busy)
+  same => n,Playback(sinbad/sinbadisbusy)
+  same => n,Goto(sinbad-endless,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-endless,s,1)
+
+[sinbad-endless]
+exten => s,1,NoOp(sinbad-endless)
+  same => n,Background(sinbad/music1_quiet)
+  same => n,GoTo(sinbad-busy,s,1)
+
+;press * to go to brendan frasier voicemail
+exten => *,1,Goto(sinbad-brendan,s,1)
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-tired-of-waiting,s,1)
+
+[sinbad-tired-of-waiting]
+exten => s,1,NoOp(sinbad-tired-of-waiting)
+  same => n,Background(sinbad/tiredofwaiting)
+  same => n,GoTo(sinbad-endless)
+
+exten => *,1,GoTo(sinbad-brendan,s,1)
+exten => i,1,GoTo(sinbad-endless,s,1)
+
+[sinbad-brendan]
+exten => s,1,NoOp(sinbad-brendan)
+  same => n,Playback(sinbad/ring3)
+  same => n,Playback(sinbad/brendan-voicemail)
+  same => n,GoTo(sinbad-record-voicemail,s,1)
+
+[sinbad-record-voicemail]
+exten => s,1,NoOp(sinbad-record-voicemail)
+  same => n,GoTo(sinbad-end-voicemail,s,1)
+
+[sinbad-end-voicemail]
+exten => s,1,NoOp(sinbad-end-voicemail)
+  same => n,Playback(sinbad/end-voicemail)
+  same => n,WaitExten(5)
+
+[sinbad-beef]
+exten => s,1,NoOp(sinbad-beef)
+  same => n,Playback(sinbad/survey)
+  same => n,Background(sinbad/music2_25s)
+  same => n,Goto(sinbad-call-doesnt-matter,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-call-doesnt-matter,s,1)
+
+[sinbad-call-doesnt-matter]
+exten => s,1,NoOp(sinbad-call-doesnt-matter)
+  same => n,Playback(sinbad/calldoesntmatter)
+  same => n,Goto(sinbad-music-2,s,1)
+
+[sinbad-great]
+exten => s,1,NoOp(sinbad-great)
+  same => n,Playback(sinbad/survey)
+  same => n,Background(sinbad/music2_25s)
+  same => n,Goto(sinbad-call-is-important,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-call-is-important,s,1)
+
+[sinbad-call-is-important]
+exten => s,1,NoOp(sinbad-call-is-important)
+  same => n,Playback(sinbad/callisimportant)
+  same => n,Goto(sinbad-music-3,s,1)
+
+[sinbad-music-3]
+exten => s,1,NoOp(sinbad-music-3)
+  same => n,Background(sinbad/music1_25s)
+  same => n,Goto(sinbad-thank-you,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-thank-you,s,1)
+
+[sinbad-thank-you]
+exten => s,1,NoOp(sinbad-thank-you)
+  same => n,Playback(sinbad/thankyou)
+  same => n,Playback(sinbad/ring3)
+  same => n,Playback(sinbad/sinbad-voicemail)
+  same => n,Goto(sinbad-record-voicemail,s,1)
+
+[sinbad-emergency]
+exten => s,1,NoOp(sinbad-emergency)
+  same => n,Playback(sinbad/survey)
+  same => n,Playback(sinbad/emergency)
+  same => n,Goto(sinbad-music-2,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-music-2,s,1)
+
+[sinbad-memoribilia]
+exten => s,1,NoOp(sinbad-memoribilia)
+  same => n,Playback(sinbad/survey)
+  same => n,Background(sinbad/music2_25s)
+  same => n,Goto(sinbad-blood-of-innocents,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-blood-of-innocents,s,1)
+
+[sinbad-blood-of-innocents]
+exten => s,1,NoOp(sinbad-blood-of-innocents)
+  same => n,Playback(sinbad/bloodofinnocents)
+  same => n,Goto(sinbad-memoribilia-music,s,1)
+
+[sinbad-memoribilia-music]
+exten => s,1,NoOp(sinbad-memoribilia-music)
+  same => n,Background(sinbad/music2)
+  same => n,Goto(sinbad-memoribilia-ring,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-memoribilia-ring,s,1)
+
+[sinbad-memoribilia-ring]
+exten => s,1,NoOp(sinbad-memoribilia-ring)
+  same => n,Playback(sinbad/ring3)
+  same => n,Goto(sinbad-goats,s,1)
+
+[sinbad-goats]
+exten => s,1,NoOp(sinbad-goats)
+  same => n,Playback(sinbad/goats)
+  same => n,WaitExten(5)
+  same => n,Goto(sinbad-not-goats,s,1)
+
+exten => 1,1,Goto(sinbad-goats-music,s,1)
+
+[sinbad-goats-music]
+exten => s,1,NoOp(sinbad-goats-music)
+  same => n,Background(sinbad/music1_30s)
+  same => n,Goto(sinbad-with-you-forever,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-with-you-forever,s,1)
+
+[sinbad-not-goats]
+exten => s,1,NoOp(sinbad-not-goats)
+  same => n,Background(sinbad/music2_25s)
+  same => n,Goto(sinbad-endless,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-endless,s,1)
+
+[sinbad-with-you-forever]
+exten => s,1,NoOp(sinbad-with-you-forever)
+  same => n,Playback(sinbad/withyouforever)
+  same => n,Goto(sinbad-endless,s,1)
+
+[sinbad-hire]
+exten => s,1,NoOp(sinbad-hire)
+  same => n,Background(sinbad/music1_30s)
+  same => n,Goto(sinbad-hire-message,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-hire-message,s,1)
+
+[sinbad-hire-message]
+exten => s,1,NoOp(sinbad-hire-messagE)
+  same => n,Playback(sinbad/hiresinbad)
+  same => n,Goto(sinbad-music-2,s,1)
+
+[sinbad-rotary]
+exten => s,1,NoOp(sinbad-rotary)
+  same => n,Playback(sinbad/rotaryphone)
+  same => n,Goto(sinbad-speak-directly,s,1)
+
+[sinbad-speak-directly]
+exten => s,1,NoOp(sinbad-speak-directly)
+  same => n,Background(sinbad/music1_30s)
+  same => n,Goto(sinbad-remember,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-remember,s,1)
+
+[sinbad-remember]
+exten => s,1,NoOp(sinbad-remember)
+  same => n,Playback(sinbad/youmayremember)
+  same => n,Goto(sinbad-speak-directly-music,s,1)
+
+[sinbad-speak-directly-music]
+exten => s,1,NoOp(sinbad-speak-directly-music)
+  same => n,Background(sinbad/music2_25s)
+  same => n,Goto(sinbad-thank-you,s,1)
+
+;press any key to go to next audio
+exten => i,1,Goto(sinbad-thank-you,s,1)
 
