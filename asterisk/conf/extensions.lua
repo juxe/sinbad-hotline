@@ -211,6 +211,11 @@ extensions = {
 			app['goto']("sinbad-hotline", "s", 1)
 		end;
 
+		["667"] = function()
+			-- app.voicemail(601, "u")
+			app.voicemail(601, "b")
+		end;
+
 	};
 
 	default = {
@@ -240,5 +245,7 @@ hints = {
 
 	default = {
 		["1234"] = "SIP/1234";
+		["601"] = "SIP/601";
+		["602"] = "SIP/602";
 	};
 }
