@@ -216,6 +216,10 @@ extensions = {
 			app.voicemail(601, "b")
 		end;
 
+		["_X."] = function ()
+			app['goto']("sinbad-hotline", "s", 1)
+		end;
+
 	};
 
 	default = {
