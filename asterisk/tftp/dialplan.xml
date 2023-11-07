@@ -1,0 +1,4 @@
+<DIALTEMPLATE>
+  <!-- sinbad hotline -->
+ <TEMPLATE MATCH="666" Timeout="0"/>
+</DIALTEMPLATE>
