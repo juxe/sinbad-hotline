@@ -1,0 +1,248 @@
+<softKeyCfg>
+<versionStamp>11cdf71b-e9bc-4559-be88-94a266766601</versionStamp>
+<typeSoftKey>
+<softKeyDef keyID="Redial">
+<tag>1</tag>
+<eventID>1</eventID>
+<helpID>301</helpID>
+</softKeyDef>
+<softKeyDef keyID="NewCall">
+<tag>2</tag>
+<eventID>2</eventID>
+<helpID>302</helpID>
+</softKeyDef>
+<softKeyDef keyID="Hold">
+<tag>3</tag>
+<eventID>3</eventID>
+<helpID>303</helpID>
+</softKeyDef>
+<softKeyDef keyID="Trnsfer">
+<tag>4</tag>
+<eventID>4</eventID>
+<helpID>304</helpID>
+</softKeyDef>
+<softKeyDef keyID="CfwdAll">
+<tag>5</tag>
+<eventID>5</eventID>
+<helpID>305</helpID>
+</softKeyDef>
+<softKeyDef keyID="CfwdBusy">
+<tag>6</tag>
+<eventID>6</eventID>
+<helpID>306</helpID>
+</softKeyDef>
+<softKeyDef keyID="CfwdNoAnswer">
+<tag>7</tag>
+<eventID>7</eventID>
+<helpID>307</helpID>
+</softKeyDef>
+
+// back
+<softKeyDef keyID="&lt;&lt;">
+<tag>8</tag>
+<eventID>8</eventID>
+<helpID>308</helpID>
+</softKeyDef>
+<softKeyDef keyID="EndCall">
+<tag>9</tag>
+<eventID>9</eventID>
+<helpID>309</helpID>
+</softKeyDef>
+<softKeyDef keyID="Resume">
+<tag>10</tag>
+<eventID>10</eventID>
+<helpID>310</helpID>
+</softKeyDef>
+<softKeyDef keyID="Answer">
+<tag>11</tag>
+<eventID>11</eventID>
+<helpID>311</helpID>
+</softKeyDef>
+<softKeyDef keyID="Info">
+<tag>12</tag>
+<eventID>12</eventID>
+<helpID>312</helpID>
+</softKeyDef>
+<softKeyDef keyID="Confrn">
+<tag>13</tag>
+<eventID>13</eventID>
+<helpID>313</helpID>
+</softKeyDef>
+<softKeyDef keyID="Park">
+<tag>14</tag>
+<eventID>14</eventID>
+<helpID>314</helpID>
+</softKeyDef>
+<softKeyDef keyID="Join">
+<tag>15</tag>
+<eventID>15</eventID>
+<helpID>315</helpID>
+</softKeyDef>
+<softKeyDef keyID="MeetMe">
+
+
+<tag>16</tag>
+<eventID>16</eventID>
+<helpID>316</helpID>
+</softKeyDef>
+<softKeyDef keyID="PickUp">
+<tag>17</tag>
+<eventID>17</eventID>
+<helpID>317</helpID>
+</softKeyDef>
+<softKeyDef keyID="GPickUp">
+<tag>18</tag>
+<eventID>18</eventID>
+<helpID>318</helpID>
+</softKeyDef>
+// remove last conference party
+<softKeyDef keyID="RmLstC">
+<tag>57</tag>
+<eventID>19</eventID>
+<helpID>319</helpID>
+</softKeyDef>
+<softKeyDef keyID="Barge">
+<tag>67</tag>
+<eventID>21</eventID>
+<helpID>321</helpID>
+</softKeyDef>
+<softKeyDef keyID="DirTrfr">
+<tag>77</tag>
+<eventID>28</eventID>
+<helpID>328</helpID>
+</softKeyDef>
+<softKeyDef keyID="Select">
+<tag>78</tag>
+<eventID>29</eventID>
+<helpID>329</helpID>
+</softKeyDef>
+<softKeyDef keyID="ConfList">
+<tag>79</tag>
+<eventID>30</eventID>
+<helpID>330</helpID>
+</softKeyDef>
+<softKeyDef keyID="VidMode">
+<tag>88</tag>
+<eventID>33</eventID>
+<helpID>333</helpID>
+</softKeyDef>
+<softKeyDef keyID="ImmDiv">
+<tag>59</tag>
+<eventID>65</eventID>
+<helpID>365</helpID>
+</softKeyDef>
+<softKeyDef keyID="Intrcpt">
+<tag>60</tag>
+<eventID>66</eventID>
+<helpID>366</helpID>
+</softKeyDef>
+<softKeyDef keyID="SetWtch">
+<tag>61</tag>
+<eventID>67</eventID>
+<helpID>367</helpID>
+</softKeyDef>
+<softKeyDef keyID="TrnsfVM">
+<tag>62</tag>
+<eventID>68</eventID>
+<helpID>368</helpID>
+</softKeyDef>
+<softKeyDef keyID="DND">
+<tag>63</tag>
+<eventID>69</eventID>
+<helpID>369</helpID>
+</softKeyDef>
+<softKeyDef keyID="DivAll">
+<tag>64</tag>
+<eventID>70</eventID>
+<helpID>370</helpID>
+</softKeyDef>
+</typeSoftKey>
+<softKeySets>
+<softKeySet id="On Hook">
+<softKey keyID="Redial"></softKey>
+<softKey keyID="NewCall"></softKey>
+<softKey keyID="Intrcpt"></softKey>
+<softKey keyID="DND"></softKey>
+<softKey keyID="CfwdAll"></softKey>
+<softKey keyID="DivAll"></softKey>
+<softKey keyID="SetWtch"></softKey>
+</softKeySet>
+<softKeySet id="Connected">
+<softKey keyID="Hold"></softKey>
+<softKey keyID="EndCall"></softKey>
+<softKey keyID="Intrcpt"></softKey>
+<softKey keyID="ImmDiv"></softKey>
+<softKey keyID="Confrn"></softKey>
+<softKey keyID="ConfList"></softKey>
+<softKey keyID="Trnsfer"></softKey>
+<softKey keyID="TrnsfVM"></softKey>
+<softKey keyID="DND"></softKey>
+<softKey keyID="Select"></softKey>
+<softKey keyID="Join"></softKey>
+<softKey keyID="DirTrfr"></softKey>
+<softKey keyID="RmLstC"></softKey>
+<softKey keyID="Park"></softKey>
+<softKey keyID="DivAll"></softKey>
+<softKey keyID="SetWtch"></softKey>
+</softKeySet>
+<softKeySet id="On Hold">
+<softKey keyID="Resume"></softKey>
+<softKey keyID="NewCall"></softKey>
+<softKey keyID="Intrcpt"></softKey>
+<softKey keyID="TrnsfVM"></softKey>
+<softKey keyID="ImmDiv"></softKey>
+<softKey keyID="DND"></softKey>
+<softKey keyID="Select"></softKey>
+<softKey keyID="Join"></softKey>
+<softKey keyID="DirTrfr"></softKey>
+<softKey keyID="SetWtch"></softKey>
+</softKeySet>
+<softKeySet id="Ring In">
+<softKey keyID="Answer"></softKey>
+<softKey keyID="ImmDiv"></softKey>
+<softKey keyID="CfwdBusy"></softKey>
+<softKey keyID="TrnsfVM"></softKey>
+<softKey keyID="DivAll"></softKey>
+<softKey keyID="DND"></softKey>
+<softKey keyID="SetWtch"></softKey>
+</softKeySet>
+<softKeySet id="Off Hook">
+<softKey keyID="Redial"></softKey>
+<softKey keyID="EndCall"></softKey>
+<softKey keyID="Intrcpt"></softKey>
+<softKey keyID="PickUp"></softKey>
+<softKey keyID="GPickUp"></softKey>
+<softKey keyID="CfwdAll"></softKey>
+<softKey keyID="MeetMe"></softKey>
+</softKeySet>
+<softKeySet id="Connected Transfer">
+<softKey keyID="Intrcpt"></softKey>
+<softKey keyID="EndCall"></softKey>
+<softKey keyID="Trnsfer"></softKey>
+</softKeySet>
+<softKeySet id="Digits After First">
+<softKey keyID="&lt;&lt;"></softKey>
+<softKey keyID="EndCall"></softKey>
+<softKey keyID="Intrcpt"></softKey>
+</softKeySet>
+<softKeySet id="Connected Conference">
+<softKey keyID="Intrcpt"></softKey>
+<softKey keyID="EndCall"></softKey>
+<softKey keyID="Confrn"></softKey>
+</softKeySet>
+<softKeySet id="Ring Out">
+<softKey keyID="EndCall"></softKey>
+<softKey keyID="Intrcpt"></softKey>
+</softKeySet>
+<softKeySet id="Off Hook With Feature">
+<softKey keyID="Redial"></softKey>
+<softKey keyID="EndCall"></softKey>
+<softKey keyID="Intrcpt"></softKey>
+</softKeySet>
+<softKeySet id="Remote In Use">
+<softKey keyID="Barge"></softKey>
+<softKey keyID="NewCall"></softKey>
+<softKey keyID="cBarge"></softKey>
+</softKeySet>
+</softKeySets>
+</softKeyCfg>
