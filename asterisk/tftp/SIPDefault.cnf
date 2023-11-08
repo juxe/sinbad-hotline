@@ -69,7 +69,7 @@ sip_invite_retx: "6"               ; Default 7
 timer_invite_expires: "180"        ; Default 180 sec
 
 # Setting for Message speeddial to UOne box
-messages_uri: "*97"
+messages_uri: "666"
 
 #Subdirectory config file location
 #tftp_cfg_dir: /tftpboot/configs/sipphone
