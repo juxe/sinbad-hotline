@@ -12,4 +12,5 @@
     </members>
   </callManagerGroup>
   <loadInformation>P0S3-8-12-00</loadInformation>
+  <softKeyFile>softkeydefault.xml</softKeyFile>
 </Default>
