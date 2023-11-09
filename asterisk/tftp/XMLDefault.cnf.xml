@@ -13,4 +13,6 @@
   </callManagerGroup>
   <loadInformation>P0S3-8-12-00</loadInformation>
   <softKeyFile>softkeydefault.xml</softKeyFile>
+  <directoryURL>http://192.168.69.1/asterisk/directory.xml</directoryURL>
+  <servicesURL>http://192.168.69.1/asterisk/services.xml</servicesURL>
 </Default>
