@@ -1,0 +1,10 @@
+<CiscoIPPhoneMenu>
+ <Title>Directory</Title>
+ <Prompt>People reachable via VoIP</Prompt>
+
+ <MenuItem>
+  <Name>Test</Name>
+  <URL>Dial:666</URL>          
+ </MenuItem>
+
+</CiscoIPPhoneMenu>

@@ -157,6 +157,7 @@ extensions = {
 			app.background("demo-moreinfo")
 			demo_instruct()
 		end;
+
 		["3"] = function ()
 			channel.LANGUAGE():set("fr") -- set the language to french
 			demo_congrats()
@@ -216,9 +217,28 @@ extensions = {
 			app.voicemail(601, "b")
 		end;
 
-		["_X."] = function ()
-			app['goto']("sinbad-hotline", "s", 1)
+		["4"] = function()
+			-- the current time is
+			app.playback("time_weather/current-time-is")
+			app.playback("time_weather/now")
+			app.playback("time_weather/and-or")
+			app.playback("time_weather/another-time")
+			app.playback("time_weather/and")
+			app.playback("time_weather/the")
+			app.playback("time_weather/temperature")
+			app.playback("time_weather/is")
+			app.playback("time_weather/large")
+			app.playback("time_weather/and")
+			app.playback("time_weather/the-weather-at")
+			app.playback("time_weather/your")
+			app.playback("time_weather/location")
+			app.playback("time_weather/is")
+			app.playback("time_weather/outside")
 		end;
+
+		-- ["_X."] = function ()
+		-- 	app['goto']("sinbad-hotline", "s", 1)
+		-- end;
 
 	};
 

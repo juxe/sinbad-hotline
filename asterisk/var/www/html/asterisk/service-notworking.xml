@@ -1,0 +1,16 @@
+<XMLDefault>
+  <URLDirectory>
+    <name>Corporate Directory</name>
+    <url>http://192.168.69.1/asterisk/corporate_directory.xml</url>
+  </URLDirectory>
+  
+  <URLDirectory>
+    <name>Weather Service</name>
+    <url>http://192.168.69.1/asterisk/weather_service.xml</url>
+  </URLDirectory>
+  
+  <URLDirectory>
+    <name>Stock Quotes</name>
+    <url>http://192.168.69.1/asterisk/stock_quotes.xml</url>
+  </URLDirectory>
+</XMLDefault>
