@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+        map > area {
+            cursor: pointer;
+        }
+        img {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="7960.webp" alt="Cisco 7960 Desk Phone" usemap="#phonemap">
+
+    <map name="phonemap">
+        <area alt="1" title="1" coords="336,420,22" shape="circle" onclick="press('1')">
+        <area alt="2" title="2" coords="395,420,22" shape="circle" onclick="press('2')">
+        <area alt="3" title="3" coords="453,420,22" shape="circle" onclick="press('3')">
+        <area alt="4" title="4" coords="336,469,22" shape="circle" onclick="press('4')">
+        <area alt="5" title="5" coords="395,469,22" shape="circle" onclick="press('5')">
+        <area alt="6" title="6" coords="453,469,22" shape="circle" onclick="press('6')">
+        <area alt="7" title="7" coords="336,519,22" shape="circle" onclick="press('7')">
+        <area alt="8" title="8" coords="395,519,22" shape="circle" onclick="press('8')">
+        <area alt="9" title="9" coords="453,519,22" shape="circle" onclick="press('9')">
+        <area alt="*" title="*" coords="336,569,22" shape="circle" onclick="press('*')">
+        <area alt="0" title="0" coords="395,569,22" shape="circle" onclick="press('0')">
+        <area alt="#" title="#" coords="453,569,22" shape="circle" onclick="press('#')">
+        <area alt="Volume Up" title="Volume Up" coords="759,507,711,527" shape="rect" onclick="pressVolumeUp()">
+        <area alt="Volume Down" title="Volume Down" coords="657,508,708,526" shape="rect" onclick="pressVolumeDown()">
+        <area alt="Speaker" title="Speaker" coords="772,569,16" shape="circle" onclick="pressSpeaker()">
+        <area alt="Line 1" title="Line 1" coords="735,140,10" shape="circle" onclick="pressLine1()">
+        <area alt="Redial" title="Redial" coords="425,347,385,332" shape="rect" onclick="pressRedial()">
+        <area alt="New Call" title="New Call" coords="495,347,458,332" shape="rect" onclick="pressNewCall()">
+    </map>
+    
+    <audio id="mainmenu"><source src="audio/ulaw/mainmenu.wav" type="audio/wav"></audio>
+    <audio id="ring1"><source src="audio/ulaw/ring1.wav" type="audio/wav"></audio>
+    <audio id="silence5s"><source src="audio/ulaw/silence5s.wav" type="audio/wav"></audio>
+    <audio id="rotaryphone"><source src="audio/ulaw/rotaryphone.wav" type="audio/wav"></audio>
+    <audio id="survey"><source src="audio/ulaw/survey.wav" type="audio/wav"></audio>
+    <audio id="music1_30s"><source src="audio/ulaw/music1_30s.wav" type="audio/wav"></audio>
+    <audio id="music2_25s"><source src="audio/ulaw/music2_25s.wav" type="audio/wav"></audio>
+    <audio id="youmayremember"><source src="audio/ulaw/youmayremember.wav" type="audio/wav"></audio>
+    <audio id="thankyou"><source src="audio/ulaw/thankyou.wav" type="audio/wav"></audio>
+    <audio id="ring3"><source src="audio/ulaw/ring3.wav" type="audio/wav"></audio>
+    <audio id="brendan-voicemail"><source src="audio/ulaw/brendan-voicemail.wav" type="audio/wav"></audio>
+    <audio id="sinbad-voicemail"><source src="audio/ulaw/sinbad-voicemail.wav" type="audio/wav"></audio>
+    <audio id="collectingchecks"><source src="audio/ulaw/collectingchecks.wav" type="audio/wav"></audio>
+    <audio id="website"><source src="audio/ulaw/website.wav" type="audio/wav"></audio>
+    <audio id="sinbadisbusy"><source src="audio/ulaw/sinbadisbusy.wav" type="audio/wav"></audio>
+    <audio id="tiredofwaiting"><source src="audio/ulaw/tiredofwaiting.wav" type="audio/wav"></audio>
+    <audio id="calldoesntmatter"><source src="audio/ulaw/calldoesntmatter.wav" type="audio/wav"></audio>
+    <audio id="callisimportant"><source src="audio/ulaw/callisimportant.wav" type="audio/wav"></audio>
+    <audio id="bloodofinnocents"><source src="audio/ulaw/bloodofinnocents.wav" type="audio/wav"></audio>
+    <audio id="goats"><source src="audio/ulaw/goats.wav" type="audio/wav"></audio>
+    <audio id="withyouforever"><source src="audio/ulaw/withyouforever.wav" type="audio/wav"></audio>
+    <audio id="hiresinbad"><source src="audio/ulaw/hiresinbad.wav" type="audio/wav"></audio>
+    <audio id="emergency"><source src="audio/ulaw/emergency.wav" type="audio/wav"></audio>
+    <audio id="dtmf_1"><source src="audio/ulaw/dtmf_1.wav" type="audio/wav"></audio>
+    <audio id="dtmf_2"><source src="audio/ulaw/dtmf_2.wav" type="audio/wav"></audio>
+    <audio id="dtmf_3"><source src="audio/ulaw/dtmf_3.wav" type="audio/wav"></audio>
+    <audio id="dtmf_4"><source src="audio/ulaw/dtmf_4.wav" type="audio/wav"></audio>
+    <audio id="dtmf_5"><source src="audio/ulaw/dtmf_5.wav" type="audio/wav"></audio>
+    <audio id="dtmf_6"><source src="audio/ulaw/dtmf_6.wav" type="audio/wav"></audio>
+    <audio id="dtmf_7"><source src="audio/ulaw/dtmf_7.wav" type="audio/wav"></audio>
+    <audio id="dtmf_8"><source src="audio/ulaw/dtmf_8.wav" type="audio/wav"></audio>
+    <audio id="dtmf_9"><source src="audio/ulaw/dtmf_9.wav" type="audio/wav"></audio>
+    <audio id="dtmf_star"><source src="audio/ulaw/dtmf_star.wav" type="audio/wav"></audio>
+    <audio id="dtmf_0"><source src="audio/ulaw/dtmf_0.wav" type="audio/wav"></audio>
+    <audio id="dtmf_pound"><source src="audio/ulaw/dtmf_pound.wav" type="audio/wav"></audio>
+</body>
+<script src="flows.js"></script>
+<!-- <script src="record.js"></script> -->
+<script src="engine.js"></script>
+</html>
