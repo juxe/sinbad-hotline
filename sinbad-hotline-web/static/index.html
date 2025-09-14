@@ -76,8 +76,20 @@
     <audio id="dtmf_star"><source src="audio/ulaw/dtmf_star.wav" type="audio/wav"></audio>
     <audio id="dtmf_0"><source src="audio/ulaw/dtmf_0.wav" type="audio/wav"></audio>
     <audio id="dtmf_pound"><source src="audio/ulaw/dtmf_pound.wav" type="audio/wav"></audio>
+    <footer>
+        Visitor Count: <span id="visitor_count"></span>
+    </footer>
 </body>
 <script src="flows.js"></script>
 <!-- <script src="record.js"></script> -->
 <script src="engine.js"></script>
+<script>
+    updateVisitorCounter();
+    async function updateVisitorCounter () {
+        const result = await fetch('api/counter');
+        if (result.ok) {
+            document.getElementById('visitor_count').innerHTML = await result.text();
+        }
+    }
+</script>
 </html>
